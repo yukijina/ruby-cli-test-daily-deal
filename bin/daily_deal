@@ -2,12 +2,15 @@
 
 #<= the file is not a ruby file (no extension) so we need the above sentence to set the file as ruby
 
-# check if it works
+# check if it works in the terminal
 #puts "Hello World"
 
-#in bash
+#in the terminal
 # ruby bin/daily_deal  - works!
 # ./bin/daily_deal - not work!
    #<= cd bin    ls -lah    (lah = list of all attribute)
+#=> after this, the above "Hello World" is printed in the terminal
 
+#===================================
+require_relative '../lib/daily_deal'
 DailyDeal::CLI.new.call

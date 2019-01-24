@@ -16,9 +16,9 @@ user types daily-deals
 
 Show a list of products
 
-1. Dyson Ball Multi Floor 2 Upright Vacuum  $174.99 - available
+1. Under Armour Men's Golf Apparel  $24.99 - 36.99 - available
 
-2. Sennheiser Adidas OMX 680 & 68-i In-Ear Headphones 2 for $20 - available
+2. 4-Pack: Deluxe Atomic Lighter Rechargeable Plasma Beam Lighters 4 for $18 - available
 
 Which product fo you want to learn more about?
 

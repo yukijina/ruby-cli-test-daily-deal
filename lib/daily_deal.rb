@@ -1,6 +1,5 @@
-require "daily_deal/version"
+require_relative "./daily_deal/version"
+require_relative "./daily_deal/cli"
 
-module DailyDeal
-  class Error < StandardError; end
-  # Your code goes here...
-end
+
+#not necessary to add extendion .rb
