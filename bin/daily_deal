@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+#<= the file is not a ruby file (no extension) so we need the above sentence to set the file as ruby
+
+# check if it works
+#puts "Hello World"
+
+#in bash
+# ruby bin/daily_deal  - works!
+# ./bin/daily_deal - not work!
+   #<= cd bin    ls -lah    (lah = list of all attribute)
+
+DailyDeal::CLI.new.call
