@@ -2,15 +2,36 @@
 class DailyDeal::CLI
 
   def call
-    puts "Today's Daily Deals:"
     list_deals
+    menu
+    goodbye
   end
 
   def list_deals
-    puts <<-DOC.gsub /^\s*/, ""
-    1. Under Armour Men's Golf Apparel  $24.99 - 36.99 - available
-    2. 4-Pack: Deluxe Atomic Lighter Rechargeable Plasma Beam Lighters 4 for $18 - available
-    DOC
+    @deals = DailyDeal::Deal.today
+  end
+
+  def menu
+    input = nil
+    while input != "exit"
+      puts "Enter the numer of the deal you'd like more info!!"
+      input = gets.chomp.downcase
+
+      if input.to_i > 0
+        puts @deals[input.to_i-1]
+      elsif input == "list"
+        list_deals
+      elsif
+        puts "Not sure what you want, tyle list or exit"
+      elsif input == "exit"
+        goodbye
+      end
+
+    end
+  end
+
+  def goodbye
+    puts "See you tomorrow!!"
   end
 
 end
