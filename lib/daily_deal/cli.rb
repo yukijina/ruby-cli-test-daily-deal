@@ -4,11 +4,14 @@ class DailyDeal::CLI
   def call
     list_deals
     menu
-    goodbye
   end
 
   def list_deals
+    puts "Today's deal: "
     @deals = DailyDeal::Deal.today
+    @deals.each.with_index(1) do |deal, index|
+      puts "#{index}. #{deal.name} - #{deal.price} - #{deal.availability}"
+    end
   end
 
   def menu
@@ -18,13 +21,13 @@ class DailyDeal::CLI
       input = gets.chomp.downcase
 
       if input.to_i > 0
-        puts @deals[input.to_i-1]
+        puts @deals[input.to_i-1].name
       elsif input == "list"
         list_deals
-      elsif
-        puts "Not sure what you want, tyle list or exit"
       elsif input == "exit"
         goodbye
+      else
+        puts "Not sure what you want, tyle list or exit"
       end
 
     end
